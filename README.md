@@ -1,13 +1,13 @@
 # Personal Learning Tracker
 
 ## Project Structure
-### Frontend (Next.js)
+### Frontend (Next.js - Pages Router)
 - **pages/**:
   - `index.tsx`: Login/Signup page
-  - `dashboard.tsx`: Dashboard with resources and summary
-  - `resources/add.tsx`: Add resource form
-  - `resources/[id].tsx`: Resource details page
-  - `api/`: API routes for authentication
+  - `dashboard.tsx`: Dashboard
+  - `resources/add.tsx`: Add resource
+  - `resources/[id].tsx`: Resource details
+  - `api/auth.ts`: Authentication API route
 - **components/**:
   - `Header.tsx`: Navigation bar
   - `ResourceCard.tsx`: Resource display
@@ -16,17 +16,19 @@
   - `api.ts`: API call utilities
 - **styles/**:
   - `globals.css`: TailwindCSS styles
-- **State Management**: React Query for API caching
+- **public/**: Static assets
+- **Configuration**:
+  - `postcss.config.mjs`
+- **State Management**: React Query
+- **Bundler**: Webpack
 
 ### Backend (Django)
+- **venv/**: Virtual environment
 - **learning_tracker/**:
   - `settings.py`: Project settings
   - `urls.py`: Main URL routing
-- **users/**:
-  - Authentication logic (JWT via Djoser)
-- **resources/**:
-  - Models: Category, Resource, ProgressLog
-  - APIs: List/add resources, resource details, mark complete, summary
+- **users/**: Authentication logic (JWT via Djoser)
+- **resources/**: Models (Category, Resource, ProgressLog), APIs
 - **Database**: PostgreSQL
   - Tables: User, Category, Resource, ProgressLog
 
