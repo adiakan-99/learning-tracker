@@ -29,12 +29,17 @@
   - `urls.py`: Main URL routing
 - **users/**: Authentication logic (JWT via Djoser)
 - **resources/**: Models (Category, Resource, ProgressLog), APIs
+- **tests/**: API test documentation
 - **Database**: PostgreSQL
   - Tables: User, Category, Resource, ProgressLog
 
 ### APIs
-- `/api/auth/`: JWT signup/login
-- `/api/resources/`: List (GET), add (POST)
-- `/api/resources/<id>/`: Details (GET)
-- `/api/resources/<id>/mark-complete/`: Mark complete (POST)
+- `/api/auth/users/`: Signup (POST)
+- `/api/auth/jwt/create/`: Login (POST)
+- `/api/auth/users/me/`: User details (GET)
+- `/api/categories/`: List/create categories (GET, POST)
+- `/api/resources/`: List/create resources (GET, POST)
+- `/api/resources/<id>/`: Resource details (GET)
+- `/api/resources/<id>/mark_complete/`: Mark complete (POST)
 - `/api/resources/summary/`: Summary data (GET)
+- `/api/progress-logs/`: List/create progress logs (GET, POST)
